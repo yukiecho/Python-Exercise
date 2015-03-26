@@ -32,3 +32,33 @@ else:
     import math            # Imports the math module
 everything = dir(math) # Sets everything to a list of things from math
 print everything       # Prints 'em all!
+
+
+def hotel_cost(nights):
+    return 140*nights
+    
+    
+    
+def rental_car_cost(days):
+    daily_cost = 40
+    if days >= 7:
+        return days*daily_cost-50
+    elif days <7 and days >=3:
+        return days*daily_cost-20
+    else:
+        return days*daily_cost
+        
+def plane_ride_cost(city):
+    if city =="Charlotte":
+        return 183
+    elif city == "Tampa":
+        return 220
+    elif city == "Pittsburgh":
+        return 222
+    elif city == "Los Angeles":
+        return 475    
+
+def trip_cost(city,days,spending_money):
+    return rental_car_cost(days) + hotel_cost(days) + plane_ride_cost(city) + spending_money
+    
+    print trip_cost("Los Angeles",5,600)
