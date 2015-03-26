@@ -14,15 +14,16 @@ clinic()
 
 
 
-# another exercise
-print 'Welcome to the Pig Latin Translator!'
+# another exercise:pyglatin
+pyg = 'ay'
 
-# Start coding here!
-print 'Welcome to the Pig Latin Translator!'
+original = raw_input('Enter a word:')
+word = original.lower()
+first = original[0]
+new_word = word + first + pyg
+new_word = new_word[1:len(new_word)]
 
-# Start coding here!
-original = raw_input("Enter a word:")
-if len(original)>0 and original.isalpha():
+if len(original) > 0 and original.isalpha():
     print original
 else:
-    print "empty"
+    print 'empty'
