@@ -25,3 +25,12 @@ def digit_sum(n):
         su = a + su
         
     return su
+#For example: anti_vowel("Hey You!") should return "Hy Y!".
+def anti_vowel(text):
+    vowel = "aeiouAEIOU"
+    tem = []
+    for t in text:
+        if t in vowel: pass
+        else: tem.append(t)
+        
+    return "".join(tem)
