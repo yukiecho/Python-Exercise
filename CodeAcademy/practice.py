@@ -40,3 +40,27 @@ def anti_vowel(text):
 threes_and_fives = [ x for x in range(1,16) if (x%3 ==0 or x%5==0)]
 
 print threes_and_fives
+
+
+#
+garbled = "!XeXgXaXsXsXeXmX XtXeXrXcXeXsX XeXhXtX XmXaX XI"
+
+nessage = ["N"]*len(garbled)
+
+for n in range(0,len(garbled)):
+    nessage[n] = garbled[len(garbled)-1-n]
+ 
+m = 0   
+message = ["N"] * int(len(nessage)/2+1)
+for n in range(0,47):
+    if nessage[n] == "X":
+        continue
+    else:
+        message[m] = nessage[n]
+        m +=1
+print "".join(message)
+
+#another way
+garbled = "!XeXgXaXsXsXeXmX XtXeXrXcXeXsX XeXhXtX XmXaX XI"
+message = garbled[::-2]
+print message
