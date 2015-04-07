@@ -88,3 +88,19 @@ class ShoppingCart(object):
             print product + " is not in the cart."
 my_cart = ShoppingCart({"apple":1})
 my_cart.add_item("pears",190)
+
+#Override Example
+class Employee(object):
+    """Models real-life employees!"""
+    def __init__(self, employee_name):
+        self.employee_name = employee_name
+
+    def calculate_wage(self, hours):
+        self.hours = hours
+        return hours * 20.00
+
+# still need to write: self.hours = hours because the "calculate_wage"function is a override
+class PartTimeEmployee(Employee):
+    def calculate_wage(self,hours):
+        self.hours = hours
+        return hours * 12
