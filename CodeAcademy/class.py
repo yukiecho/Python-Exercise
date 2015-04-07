@@ -1,6 +1,7 @@
 # one example
 class Fruit(object):
     """A class that makes various tasty fruits."""
+# the hash before "init" is double dash  __ instead of _
     def __init__(self, name, color, flavor, poisonous):
         self.name = name
         self.color = color
