@@ -63,7 +63,7 @@ hippo = Animal("lala",2)
 
 hippo.description()
 # the upper example is an example of how to call a method
-## Another one!
+## Another one!Create an instance of ShoppingCart called my_cart. Initialize it with any values you like, then use the add_item method to add an item to your cart
 class ShoppingCart(object):
     """Creates shopping cart objects
     for users of our fine website."""
@@ -86,3 +86,5 @@ class ShoppingCart(object):
             print product + " removed."
         else:
             print product + " is not in the cart."
+my_cart = ShoppingCart({"apple":1})
+my_cart.add_item("pears",190)
