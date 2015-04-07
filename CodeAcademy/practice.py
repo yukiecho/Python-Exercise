@@ -64,3 +64,10 @@ print "".join(message)
 garbled = "!XeXgXaXsXsXeXmX XtXeXrXcXeXsX XeXhXtX XmXaX XI"
 message = garbled[::-2]
 print message
+
+#bitmove practice
+#Flip the nth bit (with the ones bit being the first bit) and store it in result.
+def flip_bit(number,n):
+    mask = (0b1 <<(n-1))
+    desired = number ^ mask
+    return bin(desired)
