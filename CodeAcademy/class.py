@@ -193,8 +193,7 @@ class MappingSubclass(Mapping):
         for item in zip(keys, values):
             self.items_list.append(item)
             
-            
-# example from codeacademy
+# Example from Codecademy            
 class Car(object):
     condition = "new"
     def __init__(self, model, color, mpg):
@@ -225,5 +224,14 @@ class ElectricCar(Car):
         self.color = color
         self.mpg   = mpg
         self.battery_type = battery_type
+        
+    def drive_car(self):
+        self.condition = "like new"
     
 my_car = ElectricCar("DeLorean", "silver", 88, "molten salt")
+
+print my_car.condition
+
+my_car.drive_car()
+
+print my_car.condition
